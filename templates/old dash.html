@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='CSS/signup/dash.css')}}"
+    />
+    <link rel="import" href="{{ url_for('register') }}" />
+    <title>Pallivasal</title>
+    <link
+      rel="icon"
+      href="{{url_for('static',filename='images/logo.png')}}"
+      type="image/icon type"
+    />
+    <link rel="import" href="{{ url_for('signup') }}" />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f5cbf694f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="profile pt-5">
+      <h1 style="text-align: center; color: #ffffff">DashBoard</h1>
+    </div>
+
+    {% for item in list %}
+    <!--<li><a href="/item/{{ item.slug }}"></a></li>-->
+    
+
+    <section class="pt-3 pb-4 pl-5">
+      <div class="row">
+        <div class="col-md-3 p-4 mx-auto">
+          <!--card-->
+
+          
+          <div
+            class="card"
+            style="border: 3px solid #ffff; width: 20rem; height: 17rem"
+          >
+            <div class="card-header bg-transparent border-black text-center">
+              <h2>
+                <b><p class="name" id="nameOut">{{item.name}}</p></b>
+              </h2>
+            </div>
+            <div
+              class="card-body bg-transparent overflow-auto text-black mx-auto"
+            >
+              <div class="details">
+                <p id="typeOut">{{item.services}}</p>
+                <p id="addOut">{{item.address}}</p>
+                <p id="numOut">{{item.contact}}</p>
+              </div>
+
+              <button class="button-25" id="accept" role="button" onclick="accept()">Accept</button>
+              <button class="button-24" id="reject" role="button" onclick="reject()">Reject</button>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+        <!----------------------------------->
+
+        <!--<div class="col-lg-6 p-4 mx-auto">
+                    <div class="card" style="border: 3px solid #ffff; width: 20rem; height: 17rem;">
+                        <div class="card-header bg-transparent border-black text-center"><H2><B><p class="name" id="nameOut"></p></B></H2></div>
+                        <div class="card-body bg-transparent overflow-auto text-black mx-auto">
+                            <div class="details">        
+                                <p id="typeOut"></p>
+                                <p id="addOut"></p>
+                                <p id="numOut"></p>
+                        </div>
+                        <div class="">
+                        <button class="button-25" role="button">Accept</button>
+                        <button class="button-24" role="button">Reject</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            -->
+      </div>
+
+      <!-- HTML !-->
+
+      <!-- HTML !-->
+    </section>
+    
+  </body>
+</html>

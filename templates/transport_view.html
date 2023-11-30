@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/transport/transport_view.css') }}"/>
+    <link
+    rel="icon"
+    href="{{url_for('static',filename='images/logo.png')}}"
+    type="image/icon type"
+  /> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Pallivasal</title>
+</head>
+<body>
+
+
+    
+  <section>
+    
+    <div class="header">
+        <h2>{{list[0].services}}</h2>
+    </div>
+    <div class="table-content">
+    <table>
+        <tr class="head">
+            <th>Name of the driver</th>
+            <th>contact info</th>
+          </tr>  
+        {% for item in list %}
+        <tr class="content" >
+            <td><p id="typeOut">{{item.name}}</p></td>
+            <td><p id="typeOut">{{item.contact}}</p></td>
+        </tr>  
+        {% endfor %}
+    </table>
+    
+  </div>
+</section>
+
+</body>
+</html>

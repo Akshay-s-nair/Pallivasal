@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Carpenter</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/signin/userstyle.css') }}">
+
+</head> 
+<body>
+  {% for item in list %}
+  <div class="cardss">
+    <div class="topcard">
+      <img src="{{url_for('static',filename='images/carpenter.png')}}" alt="Carpenter icon">
+      <p class="namee">Carpentary</p>
+      <p class="editableText">Name:{{ item.name }}<br>Contact:{{ item.contact }}<br>{{ item.email }}</p>
+    </div>
+
+    <div class="bottomcard">
+      <p class="heading">SERVICES</p>
+      <div class = "boxx1">
+        <p class="descp">DESCRIPTION:</p>
+        <br>
+        <textarea class="textt" placeholder="Add your Working Time &#10;Add your Holidays &#10;Add the work you does &#10;Experience "></textarea>
+        <br>
+        <input type="submit" class="upload-button" value="Submit"> 
+      </div>  
+      
+      <div class="boxx2">
+        <p class="photos">PHOTOS OF WORK:</p>
+        <form class="form">
+          <span class="form-title">Upload your files</span>
+          <p class="form-paragraph">
+            Files should be images
+          </p>
+          <label for="file-input" class="drop-container">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" accept="image/*" required="" id="file-input" multiple>
+          </label>
+          <button type="submit" class="upload-button">Upload</button>
+        </form>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</body>
+</html>
+

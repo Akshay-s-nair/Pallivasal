@@ -1,0 +1,81 @@
+{% extends 'commonNav.html' %}
+	{% block head %}
+	 <title>Places to Visit</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='CSS/placestovisit/tourstyle.css') }}">
+	{% endblock head %}
+{% block body  %}
+		<main>
+			<h1 class="headng">Places to Visit</h1>
+			{% for item in list %}
+			<div class="container-wrapper">
+				<div class="container mx-auto" >
+					<h2>{{ item.name }}</h2>
+					<div class="slider mx-auto">
+						<a href="{{ url_for('place') }}">
+							{% if item.img1 is not none %}
+							{% set fname1 = 'uploads/' + item.img1 %}  
+							<img class="image_holder" src="{{ url_for('static',filename=fname1) }}" >	
+							{% endif %}
+							{% if item.img2 is not none %}
+							{% set fname2 = 'uploads/' + item.img2 %}  
+							<img class="image_holder" src="{{ url_for('static',filename=fname2) }}" >	
+							{% endif %}
+							{% if item.img3 is not none %}
+							{% set fname3 = 'uploads/' + item.img3 %}  
+							<img class="image_holder" src="{{ url_for('static',filename=fname3) }}" >	
+							{% endif %}
+							{% if item.img4 is not none %}
+							{% set fname4 = 'uploads/' + item.img4 %}  
+							<img class="image_holder" src="{{ url_for('static',filename=fname4) }}" >	
+							{% endif %}
+							{% if item.img5 is not none %}
+							{% set fname5 = 'uploads/' + item.img5 %}  
+							<img class="image_holder" src="{{ url_for('static',filename=fname5) }}" >	
+							{% endif %}
+						</a>
+						</div>
+					</div>
+			</div>
+			{% endfor %}
+		</main>
+
+
+	<script>// Get all the sliders on the page
+		var sliders = document.querySelectorAll('.slider');
+		
+		// Loop through each slider
+		sliders.forEach(function(slider) {
+		
+		  // Get all the images in the slider
+		  var images = slider.querySelectorAll('img');
+		
+		  // Set the current image index to 0
+		  var currentImageIndex = 0;
+		
+		  // Hide all the images except the first one
+		  for (var i = 1; i < images.length; i++) {
+			images[i].style.display = 'none';
+		  }
+		
+		  // Set an interval to change the image every 2 seconds
+		  setInterval(function() {
+		
+			// Hide the current image
+			images[currentImageIndex].style.display = 'none';
+		
+			// Increment the current image index
+			currentImageIndex++;
+		
+			// If we've reached the end of the images, start over at the beginning
+			if (currentImageIndex >= images.length) {
+			  currentImageIndex = 0;
+			}
+		
+			// Show the next image
+			images[currentImageIndex].style.display = 'block';
+		
+		  }, 2000);
+		
+		});</script>
+ {% endblock body %}
+</html>

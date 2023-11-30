@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>spices</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/spices/spices_view.css') }}"/>
+    
+  <link
+    rel="icon"
+    href="{{url_for('static',filename='images/logo.png')}}"
+    type="image/icon type"
+  />
+
+  <script>
+    function toggleDivs() {
+  var visibleDiv = document.getElementById('visibleDiv');
+
+  if (visibleDiv.style.display === 'inline-block') {
+    visibleDiv.style.display = 'flex';
+  } 
+  else {
+    visibleDiv.style.display = 'inline-block';  
+  }
+}
+function toggleDivs1() {
+  var visibleDiv = document.getElementById('visibleDiv1');
+
+  if (visibleDiv.style.display === 'inline-block') {
+    visibleDiv.style.display = 'flex';
+  } 
+  else {
+    visibleDiv.style.display = 'inline-block';  
+  }
+}
+function toggleDivs2() {
+  var visibleDiv = document.getElementById('visibleDiv2');
+
+  if (visibleDiv.style.display === 'inline-block') {
+    visibleDiv.style.display = 'flex';
+  } 
+  else {
+    visibleDiv.style.display = 'inline-block';  
+  }
+}
+
+  </script>
+</head>
+<body>
+  <div class="headboth  pt-5 ps-4">
+    <h1 class="headings">Cardamom</h1>
+    <a href="#" class="p-2" onclick="toggleDivs()" id="va"><div id="viewall" >view all</div></a>
+  </div>
+  <div class="scrollable scrollable-container">
+    <div class="content ">
+      <div class="row pt-4 pb-4" id="visibleDiv">
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+        
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 399</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 259</p>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+  
+
+
+
+  <div class="headboth  pt-5 ps-4">
+    <h1 class="headings">Pepper</h1>
+    <a href="#" class="p-2" onclick="toggleDivs1()" id="va"><div id="viewall" >view all</div></a>
+  </div>
+  <div class="scrollable scrollable-container">
+    <div class="content ">
+      <div class="row pt-4 pb-4" id="visibleDiv1">
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+        
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 399</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 259</p>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+
+
+
+  <div class="headboth  pt-5 ps-4">
+    <h1 class="headings">Cinamon</h1>
+    <a href="#" class="p-2" onclick="toggleDivs2()" id="va"><div id="viewall" >view all</div></a>
+  </div>
+  <div class="scrollable scrollable-container">
+    <div class="content ">
+      <div class="row pt-4 pb-4" id="visibleDiv2">
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 299</p>
+        </div>
+        
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 399</p>
+        </div>
+
+        <div class="item">
+          <img src="{{url_for('static',filename='images/spices.png')}}"
+            class="imagesinside"
+            alt="..."/>
+          <p class="headings">RS: 259</p>
+        </div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/signin/signup.css') }}">
+    <title>Pallivasal</title>
+    <link
+      rel="icon"
+      href="{{url_for('static',filename='images/logo.png')}}"
+      type="image/icon type"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f5cbf694f9.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <header>
+        <section class="100vh gradient-custom">
+            <div class="container h-100" id="box1">
+                <div class="row d-flex justify-content-center align-items-centre h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <section id="getotp">
+                        <div class="card bg-transparent mx-auto" style="border-radius: 1rem;">
+                            <div class="card-body p-1 text-center">
+                                <div class="mb-md-5 mt-md-4 ">
+                                    <img src="{{url_for('static',filename='images/logo.png')}}" class="img-fluid mx-auto d-block pt-3" width="110px" id="logoimg">
+                                    <h2 class="text-white sign">Sign UP</h2>
+                                    <form id="form1" action="/register" method='post' enctype="multipart/form-data" >
+                                        <div class="input-containers pb-3">
+                                            <input type="text" id="name" name='name' required=""/>
+                                            <label> Full Name</label>		
+                                        </div>
+                                        <div class="input-containers pb-3">
+                                            <input type="text" required="" id="address" name='address' />
+                                            <label>Address</label>		
+                                        </div>
+                                        <div class="input-containers pb-3">		
+                                            <input type="tel" required="" maxlength="10" id="contactNo" name='contact'/>
+                                            <label>Contact Number</label>
+                                        </div>
+                                        <div class="input-containers pb-3">		
+                                            <input type="password" required="" maxlength="10" name='password'/>
+                                            <label>Password</label>
+                                        </div>
+                                        <div class="input-containers pb-3">		
+                                            <input type="password" required="" maxlength="10" name='confirm'/>
+                                            <label> Reenter Password</label>
+                                        </div>
+                                        {% with messages = get_flashed_messages() %}
+                                                    {% if messages %}
+                                                        <div class = flashes>
+                                                    {% for message in messages %}
+                                                        <div class = alert alert-{{ category }}>{{ message }}</div>
+                                                    {% endfor %}
+                                                        </div>
+                                                    {% endif %}
+                                                    {% endwith %}
+                                        <div class="input-containers pb-3">
+                                            <input type="email" required="" name='email'/>
+                                            <label>Email</label>		
+                                        </div>
+                                        <div class="input-containers pb-3">
+                                            <select  id="selectbox" name = 'services' data-selected="" >
+                                                <option value="" selected="selected" disabled="disabled">Service Provided</option>
+                                                <option class="bg-black" value="Carpentary works">Carpentary works</option>
+                                                <option class="bg-black"  value="Plumbing services">Plumbing services</option>
+                                                <option class="bg-black"  value="Electrical works">Electrical works</option>
+                                                <option class="bg-black"  value="Trekking">Trekking Guide</option>
+                                                <option class="bg-black"  value="Spices outlet">Spices outlet</option>
+                                                <option class="bg-black"  value="plantation">plantation</option>
+                                                <option class="bg-black"  value="Jeep Safari">Jeep safari</option>
+                                                <option class="bg-black"  value="Taxi service">Taxi service</option>
+                                                <option class="bg-black"  value="Auto Rickshaw">Auto Rickshaw</option>
+                                                <option class="bg-black"  value="Bike Rental">Bike Rental</option>
+                                                <option class="bg-black"  value="Car Rental">Car Rental</option>
+                                                <option class="bg-black"  value="Home stay">Home stay</option>
+                                                <option class="bg-black"  value="Trekking">Trekking</option>
+                                            </select>	
+                                        </div>
+                                        <input id="Upload-file" type="file" name="file1">
+                                        <div class="pt-3 pb-2">
+                                       <input type="submit" class="otpbtn" value="Register" id="upload" />
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                            </section>
+                           
+                        </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+    </body>
+    </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/signin/signup.css') }}">
+    <title>Pallivasal</title>
+    <link
+      rel="icon"
+      href="{{url_for('static',filename='images/logo.png')}}"
+      type="image/icon type"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f5cbf694f9.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <header>
+        <section class="100vh gradient-custom">
+            <div class="container h-100" id="box">
+                <div class="row d-flex justify-content-center align-items-centre h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <section id="getotp">
+                        <div class="card bg-transparent w-75 mx-auto" style="border-radius: 1rem;">
+                            <div class="card-body p-2 text-center">
+                                <div class="mb-md-5 mt-md-4 ">
+                                    <img src="{{url_for('static',filename='images/logo.png')}}" class="img-fluid mx-auto d-block pt-3" width="110px" id="logoimg">
+                                    <h2 class="text-white sign">Sign Up</h2>
+                                    <div class="pb-2">
+                                    <div class="input-container">
+                                        <input type="text" required=""/>
+                                        <label>Name</label>		
+                                    </div>
+                                    </div>
+                                    <div class="input-container pb-2">		
+                                        <input type="tel" required="" maxlength="10"/>
+                                        <label>Phone Number</label>
+                                    </div>
+                                    <div class="p-3">
+                                    <button class="otpbtn" onclick="myFunction()">Get OTP</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                        <section id="submit">
+                            <div class="card bg-transparent w-75 mx-auto" style="border-radius: 1rem;">
+                                <div class="card-body p-1 text-center">
+                                    <div class="mb-md-5 mt-md-4 ">
+                                        <img src="{{url_for('static',filename='images/logo.png')}}" class="img-fluid mx-auto d-block pt-3" width="110px" id="logoimg">
+                                        <h2 class="text-white sign">Sign Up</h2>
+                                        <div class="pt-5 pb-4">	
+                                            <label class="pb-4 text-white"><h3>Enter OTP</h3></label><br>	
+                                            <input class="otp" type="tel" required="" maxlength="4" placeholder="****" />
+                                            
+                                        </div>
+                                       
+                                        <div class="p-3">
+                                        <a href="{{ url_for('register') }}"><button class="otpbtn">Submit</button></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+<script>
+    function myFunction() {
+    var x = document.getElementById("submit");
+    var y = document.getElementById("getotp");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+        y.style.display = "none";
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link
+	rel="icon"
+	href="{{url_for('static',filename='images/logo.png')}}"
+	type="image/icon type"
+  />
+	
+	<title>place</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/placestovisit/placestyle.css') }}">
+</head>
+<body>
+    <div class = "details">
+        <header>
+            <h1>Pallivasal</h1>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="description col-12 col-md-6 p-3">
+                    <h2>Description</h2>
+                    <p>Pallivasal is a village in Idukki district in the Indian state of Kerala. The first hydro-electric project in Kerala was established at Pallivasal during the reign of Maharajah Sree Chithira Thirunal Balarama Varma.
+                    Include information such as historical significance, unique features, or any other interesting facts that may draw visitors to this location.</p>
+                    <p>Activities<li>
+						Boating</li>
+						<li>Trekking</li>
+						<li>Hiking
+					</li></p>
+                </div>
+                <div class="mapp">
+                    <div class="containerr p-4">
+                        <div class="slider">
+							<img src="{{url_for('static',filename='images/test.jpg')}}" alt="Place 1">
+							<img src="{{url_for('static',filename='images/sample2.jpg')}}"  alt="Place 1">
+							<img src="{{url_for('static',filename='images/sample3.jpg')}}" alt="Place 1">
+						</div>
+						<a href="https://www.google.com/maps/place/munnar">
+							<button  class = "but">
+								<img src="{{url_for('static',filename='images/map.png')}}" alt="map">
+								<p>  Location </p>
+							</button>
+						</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <script>// Get all the sliders on the page
+		var sliders = document.querySelectorAll('.slider');
+		
+		// Loop through each slider
+		sliders.forEach(function(slider) {
+		
+		  // Get all the images in the slider
+		  var images = slider.querySelectorAll('img');
+		
+		  // Set the current image index to 0
+		  var currentImageIndex = 0;
+		
+		  // Hide all the images except the first one
+		  for (var i = 1; i < images.length; i++) {
+			images[i].style.display = 'none';
+		  }
+		
+		  // Set an interval to change the image every 2 seconds
+		  setInterval(function() {
+		
+			// Hide the current image
+			images[currentImageIndex].style.display = 'none';
+		
+			// Increment the current image index
+			currentImageIndex++;
+		
+			// If we've reached the end of the images, start over at the beginning
+			if (currentImageIndex >= images.length) {
+			  currentImageIndex = 0;
+			}
+		
+			// Show the next image
+			images[currentImageIndex].style.display = 'block';
+		
+		  }, 2000);
+		
+		});</script>
+</body>
+</html>

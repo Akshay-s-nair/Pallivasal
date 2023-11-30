@@ -1,0 +1,42 @@
+{% extends 'commonNav.html' %}
+  {% block head %}
+<title>spices</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='CSS/spices/spices.css') }}"/>
+    
+  <link
+    rel="icon"
+    href="{{url_for('static',filename='images/logo.png')}}"
+    type="image/icon type"
+  />
+  {% endblock head %}
+  
+{% block body %}
+<div class="parent">
+   <div class="container">
+    <div class="row">
+            <div class="spices col-12 col-md-6 col-lg-6" id="topp">
+                <h1 class="headings p-3">spices</h1>
+                <a href="{{ url_for('spices_view') }}">
+                    <img
+                        src="{{url_for('static',filename='images/spices.png')}}"
+                        class="images"
+                        alt="..."
+                    />
+                </a>
+            </div>
+            <div class="spices col-12 col-md-6 col-lg-6" id="topp2">
+                <h1 class="headings p-3">plantation</h1>
+                <a href="{{ url_for('plantation_crops') }}">
+                    <img
+                        src="{{url_for('static',filename='images/plantation.png')}}"
+                        class="images"
+                        alt="..."
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    {% endblock body %} 

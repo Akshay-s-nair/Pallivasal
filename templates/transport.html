@@ -1,0 +1,114 @@
+{% extends 'commonNav.html' %}
+  {% block head %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='CSS/transport/transport.css') }}"
+    />
+    <title class="headng fw-bold">Transportation</title>
+    <link
+      rel="icon"
+      href="{{url_for('static',filename='images/logo.png')}}"
+      type="image/icon type"
+    />
+
+  <style>
+    h5 {
+      color: #ffffff;
+    }
+  </style>
+  {% endblock head %}
+
+  {% block body  %}
+    <div class="container text-center" style="margin-top: 100px">
+      <div class="row-fluid">
+        <h1 style="font-family: verdana;" class="headng ">Transportation</h1>
+      </div>
+      <div class="container text-center mt-5">
+        <div class="row mb-5">
+          
+          <div class="col-lg blk">
+            {% for item in list %}
+              {% if item.services =="Jeep Safari" %}
+              <a href="/transport_view/{{ item.services }}">
+              {% endif %}
+            {% endfor %}
+            <img
+              src="{{url_for('static',filename='images/jeep.png')}}"
+              alt="" class="imgs"
+            />
+            </a>
+            <h5>Jeep Safari</h5>
+          </div>
+          
+          <div class="col-lg blk">
+            <a href="#">
+            <img
+              src="{{url_for('static',filename='images/ksrtc.png')}}"
+              alt="" class="imgs"
+              />
+            </a>
+            <h5>Bus Services</h5>
+              
+            
+          </div>
+          <div class="col-lg blk">
+            {% for item in list %}
+              {% if item.services =="Taxi Services" %}
+                <a href="/transport_view/{{ item.services }}">
+              {% endif %}
+            {% endfor %}                  
+                <img
+                  src="{{url_for('static',filename='images/taxi.png')}}"
+                  alt="" class="imgs"
+                />
+                </a>
+                <h5 id="ts">Taxi Services</h5>
+            
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-lg blk">
+            {% for item in list %}
+              {% if item.services =="Car Rental" %}
+              <a href="/transport_view/{{ item.services }}">
+              {% endif %}
+            {% endfor %}
+                <img
+                  src="{{url_for('static',filename='images/innova.png')}}"
+                  alt="" class="imgs"
+                />
+                </a>
+                <h5>Car Rental</h5>
+          </div>
+          <div class="col-lg blk">
+            {% for item in list %}
+              {% if item.services =="Bike Rental" %}
+              <a href="/transport_view/{{ item.services }}">
+              {% endif %}
+            {% endfor %}
+            <img
+              src="{{url_for('static',filename='images/scooter.png')}}"
+              alt="" class="imgs"
+            />
+            </a>
+            <h5>Bike Rental</h5>
+          </div>
+
+          <div class="col-lg blk">
+            {% for item in list %}
+              {% if item.services =="Auto Rickshaw" %}
+              <a href="/transport_view/{{ item.services }}">
+              {% endif %}
+            {% endfor %}
+            <img
+              src="{{url_for('static',filename='images/auto.png')}}"
+              alt="" class="imgs"
+            />
+            </a>
+            <h5>Auto Rickshaw</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock body %}
